@@ -1,0 +1,102 @@
+    * { font-family: 'Plus Jakarta Sans', sans-serif; }
+
+    body {
+      background: linear-gradient(rgba(15,23,42,0.7), rgba(15,23,42,0.7)), url('../img/mercy.avif') center center / cover no-repeat fixed;
+      background-blend-mode: overlay;
+      min-height: 100vh;
+      color: #fff;
+    }
+
+    .glass-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      backdrop-filter: blur(12px);
+    }
+
+    .input-field {
+      background: rgba(15, 23, 42, 0.72);
+      border: 1px solid rgba(248, 113, 35, 0.24);
+      color: #f8fafc;
+      transition: all 0.2s;
+      backdrop-filter: blur(12px);
+    }
+    .input-field:focus {
+      outline: none;
+      border-color: rgba(251, 146, 60, 0.9);
+      background: rgba(31, 41, 55, 0.88);
+      box-shadow: 0 0 0 3px rgba(251, 146, 60, 0.12);
+    }
+    .input-field::placeholder { color: rgba(248, 250, 252, 0.45); }
+
+    .label-text { color: rgba(255,255,255,0.75); }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #f97316, #ea580c);
+      transition: all 0.25s;
+    }
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 8px 24px rgba(249,115,22,0.4);
+    }
+    .btn-primary:active { transform: translateY(0); }
+
+    /* Upload zone */
+    .upload-zone {
+      border: 2px dashed rgba(255,255,255,0.15);
+      transition: all 0.2s;
+      cursor: pointer;
+    }
+    .upload-zone:hover {
+      border-color: #f97316;
+      background: rgba(249,115,22,0.06);
+    }
+    .upload-zone.dragging {
+      border-color: #f97316;
+      background: rgba(249,115,22,0.1);
+    }
+
+    /* Result Card */
+    .result-card {
+      background: linear-gradient(145deg, #1a1d27, #12151e);
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .card-badge {
+      background: linear-gradient(135deg, #f97316, #ea580c);
+    }
+
+    .card-stripe {
+      background: linear-gradient(90deg, #f97316 0%, #fb923c 50%, transparent 100%);
+      height: 3px;
+    }
+
+    .info-row {
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .info-row:last-child { border-bottom: none; }
+
+    /* Chip pattern on card */
+    .chip {
+      background: linear-gradient(135deg, #fbbf24, #f59e0b);
+      border-radius: 4px;
+    }
+
+    /* Slide in animation */
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(32px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .slide-up { animation: slideUp 0.45s cubic-bezier(0.22,1,0.36,1) both; }
+
+    /* select arrow color fix */
+    select option { background: #1a1d27; color: #fff; }
+
+    .section-divider {
+      background: rgba(255,255,255,0.06);
+      height: 1px;
+    }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #0f1117; }
+    ::-webkit-scrollbar-thumb { background: #333; border-radius: 3px; }
